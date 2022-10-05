@@ -4,10 +4,12 @@ public class Romain {
 	private String nom;
 	private int force;
 	
+	
 	public Romain(String nom, int force) {
 		super();
 		this.nom = nom;
 		this.force = force;
+		assert force >0 : "Force négative";
 	}
 
 	public String getNom() {
@@ -24,10 +26,14 @@ public class Romain {
 	
 	public void recevoirCoup (int forceCoup) {
 		force-= forceCoup;
-		if (force > 10) {
+		if (force > 0) {
 			parler("Aïe");
 		} else {
 			parler("J'abandonne ...");
 		}
+	}
+	
+	public static void main(String[] args) {
+		Romain minus = new Romain("Minus",6);
 	}
 }
