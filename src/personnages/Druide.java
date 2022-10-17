@@ -4,6 +4,7 @@ public class Druide {
 	private String nom;
 	private int effetPotionMin;
 	private int effetPotionMax;
+	private int forcePotion = 1;
 	
 	public Druide(String nom, int effetPotionMin, int effetPotionMax) {
 		super();
@@ -24,5 +25,10 @@ public class Druide {
 	
 	private String prendreParole() {
 		return "Le druide " + nom + " : ";
-	}	
+	}
+	
+	private void preparerPotion() {
+		
+	}
+	
 }
